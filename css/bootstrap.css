@@ -6074,6 +6074,10 @@ button.close {
   vertical-align: text-top !important;
 }
 
+.bg-navbar {
+  background-color: #36626a !important;
+}
+
 .bg-primary {
   background-color: #007bff !important;
 }
