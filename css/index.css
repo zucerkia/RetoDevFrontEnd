@@ -1,4 +1,9 @@
-body { font: 400 1em/1.5 "Neuton"; background: #c4e3cb; color:#265a5c; text-align: center; margin: 0 }
+body {
+	font: 400 1em/1.5 "Neuton";
+	background: #e9ecef;
+	color:#265a5c; text-align:
+	center; margin: 0
+}
 
 p {
 	text-transform: uppercase;
@@ -8,4 +13,14 @@ p {
 	border-width: 4px 0;
 	padding: 1.5em 0em;
 
+}
+
+h6 {
+	font: "Neuton"
+}
+
+.container-cards {
+	background-color:#f4f9f4;
+	border-radius:20px;
+	padding-top:20px
 }
