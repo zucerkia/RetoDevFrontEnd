@@ -12,20 +12,27 @@ window.onload = function(){
 
 function leerDatos(){
   $.ajax({
-    url: 'https://jsonplaceholder.typicode.com/photos',
+    url: 'https://jsonplaceholder.typicode.com/photos/?albumId=1',
     dataType:'json',
     type:'GET',
     success: function(data){
       console.log("Exito!");
 
+//dividir los productos
+        productos= data;
 
-        //var productos = JSON.parse(data);
 
+        for (var i = 0; i <12; i++) {
+          mostrarProductos(data[i]);
+        }
+
+/*
         for (var i in data) {
 
           mostrarProductos(data[i]);
 
          }
+*/
     },
     error: function(data){
       Console.log("Error!");
