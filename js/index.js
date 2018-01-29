@@ -10,6 +10,23 @@ window.onload = function(){
 
 }
 
+function numerarPaginas(){
+
+  var num_paginas;
+  var division = productos.length/12;
+  var redondeo = Math.round(division);
+
+if((redondeo-division)< 0.5){
+  num_paginas = redondeo+1;
+}
+else {
+  num_paginas= redondeo;
+}
+  //console.log(num_paginas);
+  //console.log(productos.length);
+
+}
+
 
 function leerDatos(){
   $.ajax({
@@ -26,6 +43,7 @@ function leerDatos(){
         for (var i = 0; i <12; i++) {
           mostrarProductos(data[i]);
         }
+        numerarPaginas();
 
 /*
         for (var i in data) {
