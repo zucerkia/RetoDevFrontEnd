@@ -7,6 +7,7 @@ var productos;
 
 window.onload = function(){
   leerDatos();
+
 }
 
 
@@ -41,6 +42,8 @@ function leerDatos(){
   });
 
 }
+
+
 
 
 function mostrarProductos(data){
