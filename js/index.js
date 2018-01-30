@@ -61,9 +61,10 @@ function leerDatos(){
 function paginarProductos(paginas){
 
 
-          for (var i = 1; i <= paginas; i++) {
+          for (var i = 0; i < paginas; i++) {
 
-            $('.pagination').append("<li class='page-item' id='"+i+"' onclick='cargarPagina(this)'><a class='page-link' href='#'>"+i+"</a></li>");
+            var numero = i+1;
+            $('.pagination').append("<li class='page-item' id='"+i+"' onclick='cargarPagina(this)'><a class='page-link' href='#'>"+numero+"</a></li>");
 
           }
 
@@ -76,7 +77,23 @@ function paginarProductos(paginas){
 function cargarPagina(e){
 
   var val = e.id;
-  console.log(val);
+
+
+  var i = val*12;
+  var tope = (parseInt(val)+1)*12;
+
+  //console.log(val);
+  //console.log(i);
+  //console.log(tope);
+
+
+
+  $("#product-cards").empty();
+
+
+  for (i ; i < tope; i++) {
+    pintarProductos(productos[i]);
+  }
 
 }
 
