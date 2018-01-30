@@ -63,7 +63,7 @@ function paginarProductos(paginas){
 
           for (var i = 1; i <= paginas; i++) {
 
-            $('.pagination').append("<li class='page-item' id='"+i+"'><a class='page-link' href='#'>"+i+"</a></li>");
+            $('.pagination').append("<li class='page-item' id='"+i+"' onclick='cargarPagina(this)'><a class='page-link' href='#'>"+i+"</a></li>");
 
           }
 
