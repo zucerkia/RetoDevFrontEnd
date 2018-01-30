@@ -36,11 +36,11 @@
               <ul class="navbar-nav mr-3">
 
                 <li class="nav-item">
-                  <button class="btn btn-outline-light my-2 my-sm-0 mr-2 nav-item"type="button">LogIn</button>
+                  <button class="btn btn-outline-light my-2 my-sm-0 mr-2 nav-item"type="button" id="btnLogin" onclick="cargarPagina(this)">LogIn</button>
 
                 </li>
                 <li class="nav-item">
-                  <button class="btn btn-outline-light  my-2 my-sm-0 nav-item" type="button">Regístrate</button>
+                  <button class="btn btn-outline-light  my-2 my-sm-0 nav-item" type="button" id="btnRegistro" onclick="cargarPagina(this)">Regístrate</button>
 
                 </li>
 
@@ -74,6 +74,7 @@
 
             <div class="row" id="product-cards">
 
+              <!--acá se agregan las cards de cada producto por página-->
 
             </div>
 
@@ -82,7 +83,8 @@
               <div class="col-md-4"></div>
               <div class="col-md-4">
                 <ul class="pagination justify-content-md-center">
-                  
+
+                  <!--acá se agregan los botones para la paginación-->
 
                 </ul>
                 <div class="col-md-4"></div>

@@ -63,24 +63,27 @@ function paginarProductos(paginas){
 
           for (var i = 1; i <= paginas; i++) {
 
-            $('.pagination').append("<li class='page-item'><a class='page-link' href='#'>"+i+"</a></li>");
+            $('.pagination').append("<li class='page-item' id='"+i+"'><a class='page-link' href='#'>"+i+"</a></li>");
 
           }
 
           for (var i = 0; i <12; i++) {
             pintarProductos(productos[i]);
           }
-/*
-
-          $('.page-item').on('click', function(e){
-
-
-
-
-          });
-          */
 
 }
+
+function cargarPagina(e){
+
+  var val = e.id;
+  console.log(val);
+
+}
+
+
+
+
+
 
 
 
@@ -88,6 +91,4 @@ function paginarProductos(paginas){
 function pintarProductos(data){
 
   $("#product-cards").prepend("<div class='col-md-3'><div class='card mb-3 box-shadow'><img src='"+data.url+"'><div class='card-body'><h6 class='card-text'>"+data.title+"</h6></div></div></div>");
-
-
 }
