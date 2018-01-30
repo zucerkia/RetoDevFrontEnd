@@ -60,9 +60,25 @@ function leerDatos(){
 
 function paginarProductos(paginas){
 
+
+          for (var i = 1; i <= paginas; i++) {
+
+            $('.pagination').append("<li class='page-item'><a class='page-link' href='#'>"+i+"</a></li>");
+
+          }
+
           for (var i = 0; i <12; i++) {
             pintarProductos(productos[i]);
           }
+/*
+
+          $('.page-item').on('click', function(e){
+
+
+
+
+          });
+          */
 
 }
 
