@@ -30,3 +30,9 @@ h6 {
 	color: #f7f6e7;
 
 }
+
+.page-link:focus{
+	box-shadow: 0 0 0 0.2rem rgba(28,102,204, 0.5);
+
+
+}
