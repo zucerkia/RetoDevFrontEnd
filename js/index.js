@@ -13,7 +13,7 @@ window.onload = function(){
 }
 
 var productos;
-
+var carrito =[];
 function numerarPaginas(){
 
   var total_productos = productos.length;
@@ -111,8 +111,24 @@ function buscarProducto(e){
 
 }
 
+function añadirProducto(e){
+
+  var elem_carrito={};
+
+
+  elem_carrito.id= e.id;
+  elem_carrito.url=e.url;
+
+  carrito.push(elem_carrito);
+
+  localStorage.setItem("carrito",carrito);
+
+}
+
+
+
 
 function pintarProductos(data){
 
-  $("#product-cards").prepend("<div class='col-md-3'><div class='card mb-3 box-shadow'><img src='"+data.url+"'><div class='card-body'><h6 class='card-text'>"+data.title+"</h6></div></div></div>");
+  $("#product-cards").prepend("<div class='col-md-3'><div class='card mb-3 box-shadow'><img src='"+data.url+"'><div class='card-body'><h6 class='card-text'>"+data.title+"</h6><button class='btn btn-success' id='"+data.id+"'onclick='añadirProducto(this)'>añadir</button></div></div></div>");
 }
