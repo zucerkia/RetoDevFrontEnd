@@ -47,8 +47,6 @@ function leerDatos(){
       paginarProductos(num_paginas,data);
 
 
-
-
     },
     error: function(data){
       Console.log("Error!");
@@ -76,17 +74,11 @@ function paginarProductos(paginas){
 
 function cargarPagina(e){
 
-  var val = e.id;
+  var id = e.id;
 
 
-  var i = val*12;
-  var tope = (parseInt(val)+1)*12;
-
-  //console.log(val);
-  //console.log(i);
-  //console.log(tope);
-
-
+  var i = id*12;
+  var tope = (parseInt(id)+1)*12;
 
   $("#product-cards").empty();
 
@@ -97,12 +89,27 @@ function cargarPagina(e){
 
 }
 
+function buscarProducto(e){
+
+ var encontrados;
+
+ var texto = document.getElementById("busqueda").value
+
+ $("#product-cards").empty();
 
 
+ for (var i in productos ) {
+
+   if((productos[i].title.indexOf(texto))>0){
+     pintarProductos(productos[i]);
+
+     //encontrados.push(productos[i]);
+     console.log(productos[i].id);
+   }
+ }
 
 
-
-
+}
 
 
 function pintarProductos(data){
