@@ -130,15 +130,17 @@ function añadirProducto(e){
 
 function cargarCarrito(){
 
+  $("#carrito-cards").empty();
+
+
   var items = JSON.parse(localStorage.getItem("carrito"));
 
   for (var i = 0; i < items.length; i++) {
 
-    var id_producto = items[i].id;
+    var id_producto = items[i].id-1;
     pintarProductosCarrito(productos[id_producto]);
 
   }
-  console.log("hola");
 
 }
 
