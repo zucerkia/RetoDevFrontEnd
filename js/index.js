@@ -149,7 +149,7 @@ function cargarCarrito(){
 
 function pintarProductos(data){
 
-  $("#product-cards").prepend("<div class='col-md-3'><div class='card mb-3 box-shadow'><img src='"+data.thumbnailUrl+"'><div class='card-body'><h6 class='card-text'>"+data.title+"</h6><button class='btn btn-success' id='"+data.id+"'onclick='añadirProducto(this)'>añadir</button></div></div></div>");
+  $("#product-cards").prepend("<div class='col-md-3'><div class='card mb-3 box-shadow'><img src='"+data.thumbnailUrl+"'><div class='card-body'><h6 class='card-text'>"+data.title+"</h6><button class='btn btn-success' id='"+data.id+"'onclick='añadirProducto(this)' data-toggle='modal' data-target='#alertCarrito'>añadir</button></div></div></div>");
 }
 
 function pintarProductosCarrito(data){
