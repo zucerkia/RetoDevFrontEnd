@@ -95,6 +95,8 @@ function buscarProducto(e){
 
  var texto = document.getElementById("busqueda").value
 
+ if(texto!=null && texto!=""){
+
  $("#product-cards").empty();
 
 
@@ -107,6 +109,7 @@ function buscarProducto(e){
      console.log(productos[i].id);
    }
  }
+}
 
 
 }
@@ -123,7 +126,11 @@ function añadirProducto(e){
 
   localStorage.setItem("carrito",carrito);
 
+
+
 }
+
+
 
 
 
@@ -131,4 +138,9 @@ function añadirProducto(e){
 function pintarProductos(data){
 
   $("#product-cards").prepend("<div class='col-md-3'><div class='card mb-3 box-shadow'><img src='"+data.url+"'><div class='card-body'><h6 class='card-text'>"+data.title+"</h6><button class='btn btn-success' id='"+data.id+"'onclick='añadirProducto(this)'>añadir</button></div></div></div>");
+}
+
+
+function funcionp(){
+  console.log("apetecan");
 }
