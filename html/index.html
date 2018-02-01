@@ -36,7 +36,7 @@
               <ul class="navbar-nav mr-3">
 
                 <li class="nav-item">
-                  <button class="btn btn-outline-light my-2 my-sm-0 mr-2 nav-item"type="button" id="btnLogin" onclick="location.href='../html/login.html'">LogIn</button>
+                  <button class="btn btn-outline-light my-2 my-sm-0 mr-2 nav-item" type="button" id="btnLogin" onclick="location.href='../html/login.html'">LogIn</button>
 
                 </li>
                 <li class="nav-item">
@@ -51,8 +51,8 @@
             <a onclick="buscarProducto()" href="#">
               <img src="/icons/lupa-de-busqueda.png" alt="">
             </a>
-            <a class="icono btn" type="button" onclick="funcionp()" data-toggle="modal" data-target="#exampleModal">
-              <img src="/icons/carrito.png"data-toggle="modal" data-target="#exampleModal" alt="">
+            <a class="icono btn" type="button" onclick="cargarCarrito()" data-toggle="modal" data-target="#exampleModal">
+              <img src="/icons/carrito.png" data-toggle="modal" data-target="#exampleModal" alt="">
             </a>
 
 
@@ -98,8 +98,6 @@
 
             </div>
           </div>
-        </div>
-      </div>
     </main>
 
 
@@ -114,7 +112,17 @@
             </button>
           </div>
           <div class="modal-body">
-            ...
+
+            <div class="container container-cards">
+
+              <div class="row" id="carrito-cards">
+
+                <!--acá se agregan las cards de correspondientes al carrito-->
+
+              </div>
+
+            </div>
+
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
