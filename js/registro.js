@@ -22,6 +22,6 @@ function añadirCliente(){
 
   localStorage.setItem("clientes",JSON.stringify(clientes));
 
-  location.href="/html/index.html";
+  //location.href="/html/index.html";
 
 }
